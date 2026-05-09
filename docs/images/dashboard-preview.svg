@@ -1,0 +1,65 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#07111F"/>
+  <rect width="230" height="720" fill="#050B16"/>
+  <text x="38" y="58" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="800">LuxTrack</text>
+  <text x="38" y="82" fill="#38BDF8" font-family="Arial, sans-serif" font-size="13" font-weight="800">PRO</text>
+  <g transform="translate(22 132)" fill="#DCEAFF" font-family="Arial, sans-serif" font-size="15" font-weight="700">
+    <rect width="186" height="42" rx="8" fill="#133765"/>
+    <text x="20" y="27">Mapa ao vivo</text>
+    <text x="20" y="86">Pedidos</text>
+    <text x="20" y="138">Atribuicao</text>
+    <text x="20" y="190">Rotas</text>
+    <text x="20" y="242">KPIs</text>
+  </g>
+
+  <g transform="translate(268 46)">
+    <text fill="#FFFFFF" font-family="Arial, sans-serif" font-size="38" font-weight="800">Mapa ao vivo</text>
+    <text y="34" fill="#9DB2D2" font-family="Arial, sans-serif" font-size="16" font-weight="600">Motoristas, pedidos ativos e sinal em tempo real</text>
+  </g>
+
+  <g transform="translate(268 112)">
+    <rect width="196" height="96" rx="10" fill="#0D1729" stroke="#5B8DEF" stroke-opacity=".28"/>
+    <text x="20" y="38" fill="#9DB2D2" font-family="Arial, sans-serif" font-size="14" font-weight="700">Pedidos</text>
+    <text x="20" y="72" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="34" font-weight="800">10</text>
+    <rect x="216" width="196" height="96" rx="10" fill="#0D1729" stroke="#5B8DEF" stroke-opacity=".28"/>
+    <text x="236" y="38" fill="#9DB2D2" font-family="Arial, sans-serif" font-size="14" font-weight="700">Em andamento</text>
+    <text x="236" y="72" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="34" font-weight="800">05</text>
+    <rect x="432" width="196" height="96" rx="10" fill="#0D1729" stroke="#5B8DEF" stroke-opacity=".28"/>
+    <text x="452" y="38" fill="#9DB2D2" font-family="Arial, sans-serif" font-size="14" font-weight="700">Online</text>
+    <text x="452" y="72" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="34" font-weight="800">04</text>
+  </g>
+
+  <g transform="translate(268 236)">
+    <rect width="660" height="420" rx="12" fill="#0B1628" stroke="#5B8DEF" stroke-opacity=".28"/>
+    <rect x="18" y="18" width="624" height="384" rx="10" fill="#111F35"/>
+    <path d="M18 18h624v384H18z" fill="url(#mapgrid)" opacity=".7"/>
+    <path d="M86 318 C190 210 302 252 392 152 S530 82 598 126" stroke="#38BDF8" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="86" cy="318" r="17" fill="#2563EB" stroke="#E0F2FE" stroke-width="3"/>
+    <circle cx="392" cy="152" r="17" fill="#0EA5E9" stroke="#E0F2FE" stroke-width="3"/>
+    <circle cx="598" cy="126" r="17" fill="#F59E0B" stroke="#E0F2FE" stroke-width="3"/>
+    <rect x="256" y="207" width="42" height="32" rx="8" fill="#E0F2FE" stroke="#38BDF8" stroke-width="3"/>
+    <path d="M268 219h16m-14 9h22" stroke="#07111F" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(956 236)">
+    <rect width="270" height="420" rx="12" fill="#0D1729" stroke="#5B8DEF" stroke-opacity=".28"/>
+    <text x="20" y="34" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="20" font-weight="800">Motoristas</text>
+    <g font-family="Arial, sans-serif" font-size="14" font-weight="700">
+      <rect x="20" y="58" width="230" height="58" rx="8" fill="#101F36"/>
+      <text x="46" y="92" fill="#FFFFFF">Ana Costa</text>
+      <circle cx="34" cy="86" r="6" fill="#22C55E"/>
+      <rect x="20" y="132" width="230" height="58" rx="8" fill="#101F36"/>
+      <text x="46" y="166" fill="#FFFFFF">Bruno Reis</text>
+      <circle cx="34" cy="160" r="6" fill="#22C55E"/>
+      <rect x="20" y="206" width="230" height="58" rx="8" fill="#101F36"/>
+      <text x="46" y="240" fill="#FFFFFF">Camila Rocha</text>
+      <circle cx="34" cy="234" r="6" fill="#22C55E"/>
+    </g>
+  </g>
+
+  <defs>
+    <pattern id="mapgrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#93C5FD" stroke-opacity=".18"/>
+    </pattern>
+  </defs>
+</svg>

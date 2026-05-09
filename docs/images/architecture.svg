@@ -1,0 +1,34 @@
+<svg width="1280" height="560" viewBox="0 0 1280 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="560" fill="#07111F"/>
+  <text x="80" y="70" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="36" font-weight="800">Arquitetura do LuxTrack Pro</text>
+  <text x="80" y="104" fill="#9DB2D2" font-family="Arial, sans-serif" font-size="17" font-weight="600">Frontend React, API Express, WebSocket e banco PostgreSQL/PostGIS via Docker.</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="80" y="170" width="250" height="150" rx="14" fill="#0D1729" stroke="#5B8DEF" stroke-opacity=".38"/>
+    <text x="112" y="214" fill="#7DD3FC" font-size="15" font-weight="800">FRONTEND</text>
+    <text x="112" y="252" fill="#FFFFFF" font-size="25" font-weight="800">React + Vite</text>
+    <text x="112" y="284" fill="#9DB2D2" font-size="15" font-weight="600">Dashboard, mapas, pedidos</text>
+    <text x="112" y="308" fill="#9DB2D2" font-size="15" font-weight="600">e app mobile do motorista</text>
+
+    <rect x="515" y="170" width="250" height="150" rx="14" fill="#0D1729" stroke="#5B8DEF" stroke-opacity=".38"/>
+    <text x="547" y="214" fill="#7DD3FC" font-size="15" font-weight="800">BACKEND</text>
+    <text x="547" y="252" fill="#FFFFFF" font-size="25" font-weight="800">Node + Express</text>
+    <text x="547" y="284" fill="#9DB2D2" font-size="15" font-weight="600">Auth, pedidos, GPS, PDF</text>
+    <text x="547" y="308" fill="#9DB2D2" font-size="15" font-weight="600">e WebSocket em tempo real</text>
+
+    <rect x="950" y="170" width="250" height="150" rx="14" fill="#0D1729" stroke="#5B8DEF" stroke-opacity=".38"/>
+    <text x="982" y="214" fill="#7DD3FC" font-size="15" font-weight="800">BANCO</text>
+    <text x="982" y="252" fill="#FFFFFF" font-size="25" font-weight="800">PostgreSQL</text>
+    <text x="982" y="284" fill="#9DB2D2" font-size="15" font-weight="600">PostGIS, indices espaciais</text>
+    <text x="982" y="308" fill="#9DB2D2" font-size="15" font-weight="600">e multi-tenant schema</text>
+
+    <path d="M350 245H495" stroke="#38BDF8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M475 232l20 13-20 13" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M785 245H930" stroke="#38BDF8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M910 232l20 13-20 13" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="292" y="384" width="696" height="82" rx="14" fill="#101F36" stroke="#5B8DEF" stroke-opacity=".28"/>
+    <text x="338" y="418" fill="#FFFFFF" font-size="20" font-weight="800">Fluxos principais</text>
+    <text x="338" y="446" fill="#9DB2D2" font-size="15" font-weight="600">Login por perfil, criacao de pedido, atribuicao, rastreamento GPS, status pipeline, comprovante e relatorio PDF.</text>
+  </g>
+</svg>

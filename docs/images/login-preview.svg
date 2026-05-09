@@ -1,0 +1,64 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" fill="#07111F"/>
+  <circle cx="150" cy="170" r="270" fill="#2563EB" fill-opacity=".18"/>
+  <circle cx="1140" cy="560" r="310" fill="#38BDF8" fill-opacity=".10"/>
+  <path d="M0 0h1280v720H0z" fill="url(#grid)" opacity=".38"/>
+
+  <g transform="translate(70 62)">
+    <rect width="80" height="52" rx="12" fill="#0B1B33"/>
+    <path d="M18 17l28-13 22 12-7 26-28 13-23-14 8-24z" fill="#2563EB"/>
+    <path d="M31 27l23-9-10 22-5-9-8-4z" fill="#E0F2FE"/>
+    <text x="102" y="24" fill="#F8FBFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">LuxTrack</text>
+    <text x="103" y="46" fill="#38BDF8" font-family="Arial, sans-serif" font-size="14" font-weight="800">PRO</text>
+  </g>
+
+  <g transform="translate(70 160)">
+    <text fill="#7DD3FC" font-family="Arial, sans-serif" font-size="16" font-weight="800">CENTRO DE COMANDO LOGISTICO</text>
+    <text y="72" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="68" font-weight="800">Rastreamento de</text>
+    <text y="148" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="68" font-weight="800">entregas em</text>
+    <text y="224" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="68" font-weight="800">tempo real.</text>
+    <text y="270" fill="#B9CAE5" font-family="Arial, sans-serif" font-size="19" font-weight="600">Uma visao limpa para acompanhar motoristas, rotas,</text>
+    <text y="298" fill="#B9CAE5" font-family="Arial, sans-serif" font-size="19" font-weight="600">ocorrencias e entregas criticas.</text>
+
+    <g transform="translate(0 334)">
+      <rect width="142" height="82" rx="8" fill="#0D1F3A" stroke="#5B8DEF" stroke-opacity=".28"/>
+      <text x="18" y="36" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="26" font-weight="800">98.4%</text>
+      <text x="18" y="62" fill="#9DB2D2" font-family="Arial, sans-serif" font-size="14" font-weight="700">SLA hoje</text>
+      <rect x="162" width="142" height="82" rx="8" fill="#0D1F3A" stroke="#5B8DEF" stroke-opacity=".28"/>
+      <text x="180" y="36" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="26" font-weight="800">04</text>
+      <text x="180" y="62" fill="#9DB2D2" font-family="Arial, sans-serif" font-size="14" font-weight="700">Motoristas</text>
+      <rect x="324" width="142" height="82" rx="8" fill="#0D1F3A" stroke="#5B8DEF" stroke-opacity=".28"/>
+      <text x="342" y="36" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="26" font-weight="800">05</text>
+      <text x="342" y="62" fill="#9DB2D2" font-family="Arial, sans-serif" font-size="14" font-weight="700">Regioes</text>
+    </g>
+  </g>
+
+  <g transform="translate(70 604)">
+    <rect width="520" height="92" rx="12" fill="#081628" stroke="#5B8DEF" stroke-opacity=".36"/>
+    <path d="M35 67 C128 24 204 56 284 30 S392 12 485 38" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 10"/>
+    <circle cx="35" cy="67" r="13" fill="#2563EB" stroke="#E0F2FE" stroke-width="2"/>
+    <circle cx="485" cy="38" r="13" fill="#0EA5E9" stroke="#E0F2FE" stroke-width="2"/>
+    <rect x="208" y="34" width="32" height="25" rx="7" fill="#E0F2FE" stroke="#38BDF8" stroke-width="2"/>
+    <path d="M217 43h13m-11 8h17" stroke="#07111F" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(850 180)">
+    <rect width="350" height="395" rx="16" fill="#081628" stroke="#5B8DEF" stroke-opacity=".34"/>
+    <text x="34" y="52" fill="#9DB2D2" font-family="Arial, sans-serif" font-size="14" font-weight="800">ENTRAR NO WORKSPACE</text>
+    <text x="34" y="84" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="28" font-weight="800">Selecionar usuario</text>
+    <rect x="34" y="120" width="282" height="54" rx="8" fill="#133765" stroke="#7DD3FC" stroke-opacity=".7"/>
+    <text x="88" y="154" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="16" font-weight="800">Admin</text>
+    <rect x="34" y="188" width="282" height="54" rx="8" fill="#0D1F3A" stroke="#5B8DEF" stroke-opacity=".28"/>
+    <text x="88" y="222" fill="#DCEAFF" font-family="Arial, sans-serif" font-size="16" font-weight="800">Despachante</text>
+    <rect x="34" y="256" width="282" height="54" rx="8" fill="#0D1F3A" stroke="#5B8DEF" stroke-opacity=".28"/>
+    <text x="88" y="290" fill="#DCEAFF" font-family="Arial, sans-serif" font-size="16" font-weight="800">Motorista</text>
+    <rect x="34" y="334" width="282" height="44" rx="8" fill="#2563EB"/>
+    <text x="111" y="362" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="15" font-weight="800">Entrar no painel</text>
+  </g>
+
+  <defs>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" stroke="#93C5FD" stroke-opacity=".16"/>
+    </pattern>
+  </defs>
+</svg>
