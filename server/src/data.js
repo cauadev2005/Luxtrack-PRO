@@ -1,32 +1,6 @@
-export const STATUSES = {
-  CREATED: { label: "Criado", tone: "neutral" },
-  GEOCODED: { label: "Geocodificado", tone: "info" },
-  ASSIGNED: { label: "Atribuido", tone: "warning" },
-  PICKED_UP: { label: "Coletado", tone: "info" },
-  IN_TRANSIT: { label: "Em rota", tone: "info" },
-  DELIVERED: { label: "Entregue", tone: "success" },
-  FAILED: { label: "Falha", tone: "danger" },
-  CANCELED: { label: "Cancelado", tone: "neutral" }
-};
-
-export const STATUS_FLOW = {
-  CREATED: ["GEOCODED", "CANCELED"],
-  GEOCODED: ["ASSIGNED", "CANCELED"],
-  ASSIGNED: ["PICKED_UP", "FAILED", "CANCELED"],
-  PICKED_UP: ["IN_TRANSIT", "FAILED"],
-  IN_TRANSIT: ["DELIVERED", "FAILED"],
-  FAILED: ["ASSIGNED", "CANCELED"],
-  DELIVERED: [],
-  CANCELED: []
-};
-
-export const ROLE_LABELS = {
-  admin: "Admin",
-  dispatcher: "Despachante",
-  driver: "Motorista"
-};
-
-const baseCenter = { lat: -23.5505, lng: -46.6333 };
+export { ROLE_LABELS, STATUSES, STATUS_FLOW } from "./data/constants.js";
+export { deterministicGeocode, haversineKm } from "./data/geo.js";
+import { deterministicGeocode } from "./data/geo.js";
 
 export function nowIso() {
   return new Date().toISOString();
@@ -34,32 +8,6 @@ export function nowIso() {
 
 export function isoHoursAgo(hours) {
   return new Date(Date.now() - hours * 60 * 60 * 1000).toISOString();
-}
-
-export function deterministicGeocode(address = "") {
-  let hash = 0;
-  for (let i = 0; i < address.length; i += 1) {
-    hash = (hash << 5) - hash + address.charCodeAt(i);
-    hash |= 0;
-  }
-  const latOffset = ((Math.abs(hash) % 1200) - 600) / 10000;
-  const lngOffset = ((Math.abs(hash >> 3) % 1600) - 800) / 10000;
-  return {
-    lat: Number((baseCenter.lat + latOffset).toFixed(6)),
-    lng: Number((baseCenter.lng + lngOffset).toFixed(6))
-  };
-}
-
-export function haversineKm(a, b) {
-  const radius = 6371;
-  const dLat = ((b.lat - a.lat) * Math.PI) / 180;
-  const dLng = ((b.lng - a.lng) * Math.PI) / 180;
-  const lat1 = (a.lat * Math.PI) / 180;
-  const lat2 = (b.lat * Math.PI) / 180;
-  const h =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
-  return Number((radius * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(1 - h))).toFixed(2));
 }
 
 const regions = {

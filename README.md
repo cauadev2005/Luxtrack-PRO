@@ -1,48 +1,78 @@
 # LuxTrack Pro
 
 <p align="center">
-  <img src="public/assets/luxtrack.png" alt="LuxTrack Pro" width="560" />
+  <img src="public/assets/luxtrack.png" alt="LuxTrack Pro" width="520" />
 </p>
 
-**LuxTrack Pro** e uma plataforma full-stack para gestao de entregas, despacho logistico e rastreamento de motoristas em tempo real.
+<p align="center">
+  Plataforma full-stack para gestao de entregas, despacho logistico e rastreamento de motoristas em tempo real.
+</p>
 
-O projeto simula uma central operacional para empresas de transporte, last mile, delivery B2B ou frotas internas. Ele inclui painel administrativo, mapa ao vivo, fluxo do despachante, app mobile do motorista, comprovante de entrega e banco PostgreSQL/PostGIS via Docker.
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,vite,nodejs,express,js,html,css,postgres,docker" alt="Tecnologias" />
+</p>
 
-![Login Preview](docs/images/login-preview.svg)
+<p align="center">
+  <img alt="React" src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=111" />
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js&logoColor=white" />
+  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL%20%2B%20PostGIS-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img alt="Docker" src="https://img.shields.io/badge/Docker-ready-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+</p>
+
+## Preview
+
+![Login](docs/images/login-preview.svg)
+
+![Dashboard](docs/images/dashboard-preview.svg)
+
+## Sobre o projeto
+
+O **LuxTrack Pro** simula uma central operacional para empresas de transporte, last mile e frotas internas. O sistema possui perfis separados, acompanhamento em mapa, fluxo de despacho, app do motorista, comprovante de entrega e relatorio mensal em PDF.
 
 ## Funcionalidades
 
-- Login com perfis separados: **Admin**, **Despachante** e **Motorista**.
-- Dashboard com mapa ao vivo e posicao dos motoristas via WebSocket.
-- Lista de pedidos com filtros por status, data, motorista e regiao.
-- Criacao de pedido com coleta, entrega e dados do destinatario.
-- Detalhe do pedido com linha do tempo completa de status.
-- Painel de atribuicao de pedidos para motoristas.
-- Rota otimizada com todas as paradas do dia.
-- KPIs: taxa de entrega no prazo, custo por km e entregas por motorista.
-- Heatmap de entregas e falhas por regiao.
-- Tela mobile do motorista com paradas, navegacao e ocorrencias.
-- Comprovante de entrega com foto e assinatura digital.
+- Login por perfil: **Admin**, **Despachante** e **Motorista**.
+- Mapa ao vivo com posicao dos motoristas via WebSocket.
+- Pedidos com filtros por status, data, regiao e motorista.
+- Criacao, atribuicao e atualizacao de status dos pedidos.
+- Rota otimizada para paradas ativas.
+- KPIs operacionais e heatmap de entregas/falhas.
+- Tela mobile do motorista com ocorrencias.
+- Comprovante com foto, assinatura digital e recebedor.
 - Relatorio mensal exportavel em PDF.
-- Banco Docker com PostgreSQL + PostGIS preparado para dados geoespaciais.
-
-![Dashboard Preview](docs/images/dashboard-preview.svg)
 
 ## Stack
 
-| Camada | Tecnologias |
+| Area | Tecnologias |
 | --- | --- |
 | Frontend | React, Vite, Leaflet, Bootstrap Icons, CSS |
 | Backend | Node.js, Express, JWT, WebSocket, Multer, PDFKit |
-| Banco | PostgreSQL 16, PostGIS, Docker Compose |
-| Mapas | Leaflet e visualizacao operacional customizada |
-| Relatorios | PDF gerado pela API |
+| Banco | PostgreSQL, PostGIS, Docker Compose |
+| Arquitetura | Hooks, views, services, middlewares e rotas por dominio |
 
 ## Arquitetura
 
 ![Arquitetura](docs/images/architecture.svg)
 
-## Como Rodar
+```txt
+client/src/
+  components/   componentes reutilizaveis
+  hooks/        auth, dados, websocket e toast
+  layout/       estrutura da aplicacao
+  views/        telas principais
+  styles/       CSS organizado por contexto
+  utils/        formatadores
+
+server/src/
+  routes/       rotas separadas por dominio
+  services/     regras de negocio
+  middlewares/  autenticacao e autorizacao
+  realtime/     websocket de localizacao
+  jobs/         simuladores em background
+  data/         constantes e geocalculo
+```
+
+## Como rodar
 
 ### 1. Instalar dependencias
 
@@ -50,37 +80,31 @@ O projeto simula uma central operacional para empresas de transporte, last mile,
 npm install
 ```
 
-No Windows PowerShell, se `npm` estiver bloqueado pela politica de scripts, use:
+No PowerShell, se `npm` estiver bloqueado:
 
 ```bash
 npm.cmd install
 ```
 
-### 2. Subir o banco com Docker
+### 2. Subir o banco
 
 ```bash
 npm run db:up
 ```
 
-Ou no Windows:
+Ou:
 
 ```bash
 npm.cmd run db:up
 ```
 
-O banco sobe em:
-
-```txt
-postgresql://luxtrack:luxtrack_dev@localhost:5432/luxtrack
-```
-
-### 3. Rodar a aplicacao
+### 3. Rodar aplicacao
 
 ```bash
 npm run dev
 ```
 
-Ou no Windows:
+Ou:
 
 ```bash
 npm.cmd run dev
@@ -91,10 +115,9 @@ Acesse:
 ```txt
 Frontend: http://localhost:5173
 API:      http://localhost:4000
-Banco:    localhost:5432
 ```
 
-## Acessos de Demo
+## Acessos demo
 
 | Perfil | E-mail | Senha |
 | --- | --- | --- |
@@ -102,108 +125,21 @@ Banco:    localhost:5432
 | Despachante | `despachante@luxtrack.pro` | `lux123` |
 | Motorista | `motorista@luxtrack.pro` | `lux123` |
 
-## Banco de Dados
-
-O schema principal esta em:
-
-```txt
-database/schema.sql
-```
-
-Ele cria tabelas para:
-
-- empresas multi-tenant;
-- usuarios e perfis;
-- motoristas;
-- veiculos;
-- pedidos;
-- historico de status;
-- posicoes GPS;
-- ocorrencias;
-- fila de notificacoes;
-- eventos de sincronizacao offline.
-
-Tambem ativa:
-
-- `postgis`
-- `pgcrypto`
-- `citext`
-
-Comandos uteis:
+## Scripts uteis
 
 ```bash
-npm run db:up      # sobe o banco
-npm run db:shell   # abre o psql dentro do container
-npm run db:logs    # mostra logs do banco
-npm run db:down    # para os containers
-npm run db:reset   # apaga volume e recria aplicando schema.sql
+npm run dev       # frontend + API
+npm run build     # build de producao
+npm run start     # inicia API/servidor
+npm run db:up     # sobe PostgreSQL/PostGIS
+npm run db:down   # para containers
+npm run db:reset  # recria banco
 ```
 
-## Estrutura do Projeto
+## Observacao
 
-```txt
-.
-├── client/
-│   └── src/
-│       ├── App.jsx
-│       ├── api.js
-│       ├── main.jsx
-│       └── styles.css
-├── server/
-│   └── src/
-│       ├── data.js
-│       └── index.js
-├── database/
-│   └── schema.sql
-├── docs/
-│   └── images/
-├── public/
-│   └── assets/
-│       └── luxtrack.png
-├── docker-compose.yml
-├── package.json
-└── README.md
-```
+Esta versao usa dados em memoria para facilitar a demonstracao visual e funcional. O projeto ja possui Docker, PostgreSQL/PostGIS e schema em `database/schema.sql`, preparado para uma proxima etapa com persistencia real.
 
-## Endpoints Principais
+## Autor
 
-| Metodo | Rota | Descricao |
-| --- | --- | --- |
-| `POST` | `/api/auth/login` | Login por perfil |
-| `GET` | `/api/orders` | Lista pedidos com filtros |
-| `POST` | `/api/orders` | Cria pedido |
-| `GET` | `/api/orders/:id` | Detalhe do pedido |
-| `PATCH` | `/api/orders/:id/assign` | Atribui pedido ao motorista |
-| `PATCH` | `/api/orders/:id/status` | Atualiza status do pedido |
-| `POST` | `/api/drivers/:id/location` | Recebe posicao GPS |
-| `POST` | `/api/routes/optimize` | Calcula rota otimizada |
-| `GET` | `/api/kpis` | Retorna KPIs |
-| `GET` | `/api/heatmap` | Retorna pontos do heatmap |
-| `POST` | `/api/orders/:id/proof` | Envia comprovante |
-| `GET` | `/api/reports/monthly.pdf` | Gera relatorio PDF |
-
-WebSocket:
-
-```txt
-ws://localhost:4000/ws/locations
-```
-
-## Observacao Importante
-
-O projeto ja possui **Docker + PostgreSQL + PostGIS** configurado e o schema e aplicado automaticamente na primeira criacao do volume.
-
-Nesta versao de demonstracao, a API ainda usa dados em memoria para facilitar a avaliacao visual e funcional. O proximo passo tecnico e conectar os endpoints Express ao PostgreSQL usando o schema em `database/schema.sql`.
-
-## Roadmap
-
-- Persistir dados reais no PostgreSQL/PostGIS.
-- Criar seed SQL com empresas, usuarios, motoristas e pedidos.
-- Adicionar migrations versionadas.
-- Integrar provedor real de geocoding e rotas.
-- Adicionar testes automatizados para criacao, atribuicao e entrega.
-- Implementar sincronizacao offline real para o app do motorista.
-- Criar pipeline de CI/CD.
-
-## Licenca
-
-Projeto desenvolvido para portfolio e estudo de arquitetura full-stack logistica.
+Projeto desenvolvido para estudo e portfolio full-stack.
